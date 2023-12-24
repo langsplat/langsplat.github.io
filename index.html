@@ -18,6 +18,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.svg">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -65,20 +66,23 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">LangSplat: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">LangSplat: 3D Language Gaussian Splatting</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://github.com/minghanqin">Minghan Qin</a><sup>1*</sup>,</span>
             <span class="author-block">
-              Wanhua Li<sup>2*</sup>,</span>
+              <a href="https://li-wanhua.github.io/">Wanhua Li</a><sup>2*&#134;</sup>,</span>
             <span class="author-block">
-              Jiawei Zhou<sup>1*</sup>,
+              <a href="https://latitudezhou.github.io/">Jiawei Zhou</a><sup>1*</sup>,
             </span>
             <span class="author-block">
-              Haoqian Wang<sup>1&#134;</sup>,
+              <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a><sup>1&#134;</sup>,
             </span>
             <span class="author-block">
-              Hanspeter Pfister<sup>2&#134;</sup>,
+              <a href="https://seas.harvard.edu/person/hanspeter-pfister">Hanspeter Pfister</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              (* indicates equal contribution, &#134; means Co-corresponding author),
             </span>
           </div>
 
@@ -120,7 +124,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/minghanqin/LangSplat"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -128,15 +132,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -150,6 +145,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
+        <div class="content has-text-justified">
+          <p>
+            TL;DR: We ground CLIP language features into a set of 3D language Gaussians, which attains precise 3D language fields while being <font color="red"><b>199&times;</b></font> faster than LERF.
+          </p>
+        </div>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -186,8 +186,8 @@
             semantics using SAM, thereby eliminating the need for extensively querying the language field across 
             various scales and the regularization of DINO features. Extensive experiments on open-vocabulary 3D 
             object localization and semantic segmentation demonstrate that LangSplat significantly outperforms the 
-            previous state-of-the-art method LERF. Notably, LangSplat is extremely efficient, achieving a 199 
-            &times; speedup compared to LERF.
+            previous state-of-the-art method LERF. Notably, LangSplat is extremely efficient, achieving a <font color="red"><b>199&times;</b></font> 
+            speedup compared to LERF.
           </p>
         </div>
       </div>
@@ -202,20 +202,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Visualization of learned features of the LangSplat</h3>
-        <div class="content has-text-justified">
-          <p>
-            Visualization of learned features of the previous SOTA method LERF and 
-            our LangSplat. LangSplat grounds CLIP features into a set of 3D Language 
-            Gaussians to construct a 3D language field. While LERF generates imprecise 
-            and vague 3D features, our LangSplat accurately captures object boundaries 
-            and provides precise 3D language fields without any post-processing. While 
-            being effective, our LangSplat is also 199 &times; faster than LERF at the 
-            resolution of 1440 &times; 1080.
-          </p>
-        </div>
-        <div class="hero-body">
-          <img src="./static/images/teaser.png"/>
+        <h3 class="title is-4">Visualization of learned features</h3>
         </div>
         <div class="content has-text-centered">
           <video id="replay-video"
@@ -223,19 +210,7 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
-            <source src="./static/videos/feature1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/feature2.mp4"
                     type="video/mp4">
           </video>
@@ -246,7 +221,20 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
+            <source src="./static/videos/feature1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
             <source src="./static/videos/feature3.mp4"
                     type="video/mp4">
           </video>
@@ -257,31 +245,35 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/feature4.mp4"
                     type="video/mp4">
           </video>
         </div>
-        
-        <h3 class="title is-4">Open-vocabulary 3D Query of the LangSplat vs LERF</h3>
+
+        <div class="hero-body">
+          <img src="./static/images/teaser.png"/>
         <div class="content has-text-justified">
           <p>
-            Our LangSplat is able to focus more precisely on the queried object.
+            Visualization of learned features of the previous SOTA method LERF and 
+            our LangSplat. LangSplat grounds CLIP features into a set of 3D Language 
+            Gaussians to construct a 3D language field. While LERF generates imprecise 
+            and vague 3D features, our LangSplat accurately captures object boundaries 
+            and provides precise 3D language fields without any post-processing. While 
+            being effective, our LangSplat is also <font color="red"><b>199&times;</b></font> faster than LERF at the 
+            resolution of 1440 &times; 1080.
           </p>
         </div>
-        <div class="hero-body">
-          <img src="./static/images/localization.png"/>
-        </div>
-        <div class="hero-body">
-          <img src="./static/images/iou.png"/>
-        </div>
+
+        <h3 class="title is-4">Open-vocabulary 3D Query</h3>
+
         <div class="content has-text-centered">
           <video id="replay-video"
                  controls
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/ovq1.mp4"
                     type="video/mp4">
           </video>
@@ -292,29 +284,30 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/ovq2.mp4"
                     type="video/mp4">
           </video>
         </div>
-
-        <h3 class="title is-4">Open-vocabulary 3D Semantic Segmentation results of the LangSplat</h3>
-        <div class="content has-text-justified">
-          <p>
-            Our method is 199 &times; faster than LERF at 1440*1080 resolution.<br>
-            Prior to any text query, our language field already exhibits precise 3D object boundaries.
-          </p>
+        <div class="hero-body">
+          <img src="./static/images/localization.png"/>
         </div>
         <div class="hero-body">
-          <img src="./static/images/semantic_segmentation.png"/>
+          <img src="./static/images/iou.png"/>
         </div>
+        <div class="content has-text-justified">
+          <p>
+            Our LangSplat is able to focus more precisely on the queried object.
+          </p>
+        </div>
+        <h3 class="title is-4">Open-vocabulary 3D Semantic Segmentation</h3>
         <div class="content has-text-centered">
           <video id="replay-video"
                  controls
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/semantic1.mp4"
                     type="video/mp4">
           </video>
@@ -325,10 +318,19 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/semantic2.mp4"
                     type="video/mp4">
           </video>
+        </div>
+        <div class="hero-body">
+          <img src="./static/images/semantic_segmentation.png"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Our method is <font color="red"><b>199&times;</b></font> faster than LERF at 1440*1080 resolution.<br>
+            Prior to any text query, our language field already exhibits precise 3D object boundaries.
+          </p>
         </div>
       </div>
     </div>
@@ -340,16 +342,35 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{qin2023Lang,
+  title={LangSplat: 3D Language Gaussian Splatting},
+  author={Qin, Minghan and Li, Wanhua and Zhou, Jiawei and Wang, Haoqian and Pfister, Hanspeter},
+  journal={arXiv preprint arXiv:2310.06275},
+  year={2023}
 }</code></pre>
   </div>
 </section>
 
-
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The souce code is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>,
+              we thank the authors for sharing the templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
