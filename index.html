@@ -140,7 +140,7 @@
     </div>
   </div>
 </section>
-
+<section class="section">
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -193,148 +193,140 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
+</section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <!-- Re-rendering. -->
         <h3 class="title is-4">Visualization of learned features</h3>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/feature2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/feature1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/feature2.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/feature1.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/feature3.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/feature4.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
 
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/feature3.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/feature4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <div class="hero-body">
-          <img src="./static/images/teaser.png"/>
-        <div class="content has-text-justified">
-          <p>
-            Visualization of learned features of the previous SOTA method LERF and 
-            our LangSplat. LangSplat grounds CLIP features into a set of 3D Language 
-            Gaussians to construct a 3D language field. While LERF generates imprecise 
-            and vague 3D features, our LangSplat accurately captures object boundaries 
-            and provides precise 3D language fields without any post-processing. While 
-            being effective, our LangSplat is also <font color="red"><b>199&times;</b></font> faster than LERF at the 
-            resolution of 1440 &times; 1080.
-          </p>
-        </div>
-
-        <h3 class="title is-4">Open-vocabulary 3D Query</h3>
-
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/ovq1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/ovq2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="hero-body">
-          <img src="./static/images/localization.png"/>
-        </div>
-        <div class="hero-body">
-          <img src="./static/images/iou.png"/>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            Our LangSplat is able to focus more precisely on the queried object.
-          </p>
-        </div>
-        <h3 class="title is-4">Open-vocabulary 3D Semantic Segmentation</h3>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/semantic1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="80%">
-            <source src="./static/videos/semantic2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="hero-body">
-          <img src="./static/images/semantic_segmentation.png"/>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            Our method is <font color="red"><b>199&times;</b></font> faster than LERF at 1440*1080 resolution.<br>
-            Prior to any text query, our language field already exhibits precise 3D object boundaries.
-          </p>
-        </div>
+      <div class="hero-body">
+        <img src="./static/images/teaser.png"/>
+      <div class="content has-text-justified">
+        <p>
+          Visualization of learned features of the previous SOTA method LERF and 
+          our LangSplat. LangSplat grounds CLIP features into a set of 3D Language 
+          Gaussians to construct a 3D language field. While LERF generates imprecise 
+          and vague 3D features, our LangSplat accurately captures object boundaries 
+          and provides precise 3D language fields without any post-processing. While 
+          being effective, our LangSplat is also <font color="red"><b>199&times;</b></font> faster than LERF at the 
+          resolution of 1440 &times; 1080.
+        </p>
+      </div>
+      <h3 class="title is-4">Open-vocabulary 3D Query</h3>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/ovq1.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/ovq2.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-body">
+        <img src="./static/images/localization.png"/>
+      </div>
+      <div class="hero-body">
+        <img src="./static/images/iou.png"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Our LangSplat is able to focus more precisely on the queried object.
+        </p>
+      </div>
+      <h3 class="title is-4">Open-vocabulary 3D Semantic Segmentation</h3>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/semantic1.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+        <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="75%">
+          <source src="./static/videos/semantic2.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-body">
+        <img src="./static/images/semantic_segmentation.png"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Our method is <font color="red"><b>199&times;</b></font> faster than LERF at 1440*1080 resolution.<br>
+          Prior to any text query, our language field already exhibits precise 3D object boundaries.
+        </p>
       </div>
     </div>
-
   </div>
 </section>
 
